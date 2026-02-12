@@ -1,11 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ofertas</title>
+    <title>datyra Store | Ofertas Exclusivas</title>
+    <link rel="stylesheet" href="Ofertas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Ofertas</h1>
+
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker__item">🔥 GRAN VENTA DE TEMPORADA - 10% DE DESCUENTO ADICIONAL EN TODA LA TIENDA 🔥</div>
+            <div class="ticker__item">APROVECHA LAS OFERTAS - ENVÍOS GRATIS EN COMPRAS MAYORES A $50</div>
+            <div class="ticker__item">CÓDIGO: GREEN10 - OFERTAS 10% DE DESCUENTO</div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">🌿 DATYRA<span>Store</span></div>
+            <div class="cart-trigger" onclick="toggleCarrito()">
+                <span class="icon">🛒</span>
+                <span id="cuenta-carrito">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Nuestra Colección <span>Premium</span></h2>
+            <p>Productos seleccionados para un estilo de vida sostenible.</p>
+        </section>
+
+        <div class="layout-main">
+            <section class="productos-grid">
+                <div class="card">
+                    <div class="badge">Nuevo</div>
+                    <img src="https://comprarmag.com/wp-content/uploads/2024/08/WhatsApp-Image-2024-07-08-at-10.51.51-AM-1-1-1.jpeg" alt="Prod">
+                    <div class="card-body">
+                        <h3>air pods gen 2</h3>
+                        <p class="desc">Sonido de alta fidelidad natural.</p>
+                        <div class="price-row">
+                            <span class="price">$1.200.000</span>
+                            <button onclick="agregar('AirPods Gen 2', 1200000)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://co.tiendasishop.com/cdn/shop/files/IMG-18067856_m_jpeg_1_61d15fa5-aa0c-4547-b09a-93f55f8f9413.jpg?v=1757687601&width=823" alt="Prod">
+                    <div class="card-body">
+                        <h3>ihpone 17 pro max </h3>
+                        <p class="desc">nuevo iphone 17 pro max diferentes colores </p>
+                        <div class="price-row">
+                            <span class="price">$8.000.000</span>
+                            <button onclick="agregar('iPhone 17 Pro Max', 8000000)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="badge">Oferta</div>
+                    <img src="https://media.falabella.com/falabellaCO/142348826_01/w=1500,h=1500,fit=cover" alt="Prod">
+                    <div class="card-body">
+                        <h3>pc gamer </h3>
+                        <p class="desc">PC Gamer Ryzen 7 5700G / 32GB Ram / 1.5TB SSD.</p>
+                        <div class="price-row">
+                            <span class="price">$3.499.900</span>
+                            <button onclick="agregar('PC Gamer Ryzen 7', 3499900)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://megacomputer.com.co/wp-content/uploads/2023/12/PORTATIL-ASUS-G513RC-HN177.jpeg.webp" alt="Prod">
+                    <div class="card-body">
+                        <h3>portatil gamer </h3>
+                        <p class="desc">Asus ROG Ryzen 7 Ram 16GB Ssd 512 GB.</p>
+                        <div class="price-row">
+                            <span class="price">$5.499.900</span>
+                            <button onclick="agregar('Portátil Asus ROG', 5499900)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_662347-CBT103474134502_012026-F.webp" alt="Prod">
+                    <div class="card-body">
+                        <h3>proyector de alta calidad </h3>
+                        <p class="desc">Proyector Profesional 8k Android 11.</p>
+                        <div class="price-row">
+                            <span class="price">$239.410</span>
+                            <button onclick="agregar('Proyector 8k', 239410)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://i0.wp.com/multitiendaelectro.com/wp-content/uploads/2025/07/3-15.png?fit=1080%2C1080&ssl=1" alt="Prod">
+                    <div class="card-body">
+                        <h3>Mochila parlante inteligente</h3>
+                        <p class="desc">Mochila Parlante Bluetooth con Power Bank 10W.</p>
+                        <div class="price-row">
+                            <span class="price">$500.000</span>
+                            <button onclick="agregar('Mochila Parlante', 500000)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="sidebar-cart" id="sidebar-cart">
+                <div class="cart-header">
+                    <h3>Tu Pedido</h3>
+                    <button onclick="toggleCarrito()">Cerrar</button>
+                </div>
+                <div id="cart-list" class="cart-list"></div>
+                <div class="cart-footer">
+                    <div class="total-line">
+                        <span>Total:</span>
+                        <span id="total-price">$0.00</span>
+                    </div>
+                    <button class="btn-checkout" onclick="realizarPago()">Pagar Ahora</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script>
+        let carrito = [];
+
+        function agregar(nombre, precio) {
+            const item = { id: Date.now(), nombre, precio };
+            carrito.push(item);
+            actualizarInterfaz();
+            alerta("✅ Añadido con éxito");
+        }
+
+        function borrar(id) {
+            carrito = carrito.filter(p => p.id !== id);
+            actualizarInterfaz();
+            alerta("🗑️ Borrado exitoso", "#ff4d4d");
+        }
+
+        function realizarPago() {
+            if (carrito.length === 0) return alerta("Carrito vacío", "#666");
+            alerta("🎉 Pago exitoso", "#27ae60");
+            carrito = [];
+            actualizarInterfaz();
+        }
+
+        function actualizarInterfaz() {
+            const lista = document.getElementById('cart-list');
+            const totalTxt = document.getElementById('total-price');
+            const cuenta = document.getElementById('cuenta-carrito');
+            let suma = 0;
+
+            lista.innerHTML = "";
+            carrito.forEach(p => {
+                suma += p.precio;
+                lista.innerHTML += `
+                    <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #eee;">
+                        <span style="font-size:14px;">${p.nombre}</span>
+                        <div>
+                            <span style="font-weight:bold; margin-right:10px;">$${p.precio.toLocaleString('es-CO')}</span>
+                            <button onclick="borrar(${p.id})" style="color:red; border:none; background:none; cursor:pointer; font-weight:bold;">x</button>
+                        </div>
+                    </div>`;
+            });
+
+            totalTxt.innerText = "$" + suma.toLocaleString('es-CO');
+            cuenta.innerText = carrito.length;
+        }
+
+        function alerta(txt, color = "#2d6a4f") {
+            const div = document.createElement('div');
+            div.innerText = txt;
+            div.style.cssText = `position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:${color}; color:white; padding:12px 20px; border-radius:10px; z-index:9999; font-weight:bold; font-family:sans-serif; animation: anim 2s forwards;`;
+            document.body.appendChild(div);
+            setTimeout(() => div.remove(), 2000);
+        }
+
+        function toggleCarrito() {
+            const c = document.getElementById('sidebar-cart');
+            c.style.display = (c.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+    <style>
+        @keyframes anim {
+            0% { bottom: -50px; opacity: 0; }
+            20% { bottom: 20px; opacity: 1; }
+            80% { bottom: 20px; opacity: 1; }
+            100% { bottom: -50px; opacity: 0; }
+        }
+    </style>
 </body>
 </html>
