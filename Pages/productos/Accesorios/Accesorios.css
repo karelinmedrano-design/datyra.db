@@ -1,0 +1,63 @@
+/* Contenedor principal */
+.contenedor-productos {
+  display: grid;
+  /* Crea columnas que se ajustan solas al ancho de la pantalla */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Estilo de la tarjeta (Article) */
+.tarjeta-producto {
+  border: 1px solid #e5e5e5;
+  border-radius: 15px; /* Curva suave de los bordes */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.tarjeta-producto:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Contenedor de imagen para centrarla */
+.imagen-wrapper {
+  background-color: #fcfcfc;
+  padding: 10px;
+  text-align: center;
+}
+
+.imagen-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Texto y detalles */
+.contenido {
+  padding: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo {
+  font-size: 1.1rem;
+  color: #2c2c54; /* Color azulado oscuro */
+  margin: 0 0 8px 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.precio {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+  margin: 5px 0;
+}
+
+.marca {
+  font-size: 0.9rem;
+  color: #757575;
+  margin: 0;
+}
