@@ -12,7 +12,7 @@ Proyect_DatyraStore/
 │   │   └── Extras/                          ← Contenido adicional 
 │
 ├── Pages/                                   ← Secciones de navegación 
-│   ├── productos/
+│   ├── Productos/
 │   │   ├── Dispositivos/
 |   |   |   ├── Dispositivos.html
 │   │   |   └── Dispositivos.css
@@ -23,11 +23,11 @@ Proyect_DatyraStore/
 |   |   |   ├── Accesorios.html
 │   │   |   └── Accesorios.css
 │   │   |
-│   ├── ofertas/
+│   ├── Ofertas/
 │   │   ├── Ofertas.html
 │   │   └── ofertas.css
 │   │
-│   └── contactos/
+│   └── Contactos/
 │       ├── Contactos.html
 │       └── Contactos.css
 │
