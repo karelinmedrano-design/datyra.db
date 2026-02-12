@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* HEADER */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #02523a;  
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+}
+
+.logo {
+    height: 50px;
+}
+
+.site-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.site-tagline {
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+/* NAV */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: #22c55e; /* verde Datyra */
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: #011b0f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.main-footer a {
+    color: #22c55e;
+    text-decoration: none;
+}
+.contact-section{
+    padding: 80px 10%;
+    background-color: #f9f9f9;
+}
+.contact-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+}
+.contact-info{
+    flex: 1;
+    min-width: 300px;
+}
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 10% 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
