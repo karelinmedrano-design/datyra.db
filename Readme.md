@@ -1,3 +1,4 @@
+
 Proyect_DatyraStore/
 │
 ├── index.html                               ← página principal (inicio)
@@ -11,17 +12,24 @@ Proyect_DatyraStore/
 │   │   └── Extras/                          ← Contenido adicional 
 │
 ├── Pages/                                   ← Secciones de navegación 
-│   ├── productos/
-│   │   ├── index.html
-│   │   └── productos.css
-│   │
-│   ├── ofertas/
-│   │   ├── index.html
+│   ├── Productos/
+│   │   ├── Dispositivos/
+|   |   |   ├── Dispositivos.html
+│   │   |   └── Dispositivos.css
+│   │   ├── Componentes/
+|   |   |   ├── Componentes.html
+│   │   |   └── Componentes.css
+│   │   ├── Accesorios/
+|   |   |   ├── Accesorios.html
+│   │   |   └── Accesorios.css
+│   │   |
+│   ├── Ofertas/
+│   │   ├── Ofertas.html
 │   │   └── ofertas.css
 │   │
-│   └── contacto/
-│       ├── index.html
-│       └── contacto.css
+│   └── Contactos/
+│       ├── Contactos.html
+│       └── Contactos.css
 │
 |
 └── README.md                               ← Información y registros  
@@ -47,6 +55,8 @@ En cargo: Ofertas
 Abarca: Sección de descuentos, destacados,
 componentes reutilizables
 
+
+Integrante 4 = Luis Castilla
 
 En cargo: Contacto (información/vendedores)
 Abarca: Contactos (Redes/links), información
