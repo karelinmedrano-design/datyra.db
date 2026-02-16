@@ -42,13 +42,75 @@ body {
     opacity: 0.85;
 }
 
-/* NAV */
+/* --- NAVEGACIÓN Y DESPLEGABLE --- */
+
+/* Contenedor principal de la lista */
 .main-nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
+/* El elemento que contiene el submenú debe ser relativo */
+.main-nav li.dropdown {
+    position: relative;
+}
+
+/* Enlaces principales */
+.main-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    display: block;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+/* --- SUBMENÚ (Oculto por defecto) --- */
+.main-nav .submenu {
+    display: none;             /* Lo oculta totalmente */
+    position: absolute;        /* Lo hace flotar sobre el contenido */
+    top: 100%;                 /* Lo posiciona justo debajo del padre */
+    left: 0;
+    background-color: #02523a; /* El verde oscuro de tu header */
+    min-width: 180px;
+    flex-direction: column;    /* Fuerza a que los items salgan hacia abajo */
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 1000;             /* Asegura que pase por encima del Hero */
+    padding: 10px 0;
+}
+
+/* Items dentro del submenú */
+.main-nav .submenu li {
+    width: 100%;
+}
+
+.main-nav .submenu li a {
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* --- INTERACCIÓN --- */
+
+/* Al pasar por el padre, mostramos el hijo */
+.main-nav li.dropdown:hover .submenu {
+    display: flex;             /* Cambia de none a flex para mostrarse */
+}
+
+/* Cambios de color al pasar el mouse */
+.main-nav a:hover, 
+.main-nav .submenu li a:hover {
+    color: #22c55e;            /* Verde brillante de Datyra */
+}
+
+.main-nav .submenu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil al resaltar */
+}
 .main-nav a {
     text-decoration: none;
     color: #fff;
@@ -203,3 +265,4 @@ body {
     max-width: 900px; /* Limita el ancho para que no se peguen a los bordes */
     margin: 40px auto;
 }
+
