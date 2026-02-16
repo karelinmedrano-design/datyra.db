@@ -27,7 +27,8 @@ body {
 }
 
 .logo {
-    height: 50px;
+    height: 60px;
+    border-radius: 5px;
 }
 
 .site-name {
@@ -70,4 +71,135 @@ body {
 .main-footer a {
     color: #22c55e;
     text-decoration: none;
+}
+
+/* --- ajustes globales ---*/
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+}
+
+/* --- hero section ---*/
+.hero {
+    background: linear-gradient( rgba(0, 38, 28, 0.7), rgba(0, 38, 28, 0.7)),
+                url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay {
+    background: rgba(0, 38, 28, 0.6); /* Oscurece la imagen para leer mejor */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero Text Heading */
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Primary Button */
+.btn-primary {
+    display: inline-block;
+    background-color: #2e7d32; /* Un verde vibrante pero profesional */
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+/* Hover effect for Primary Button */
+.btn-primary:hover {
+    /* El código se corta aquí en la imagen, 
+       pero usualmente sería algo como: */
+    background-color: #1b5e20;
+    transform: scale(1.05);
+}
+
+/* --- Categorías --- */
+.categories-preview {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.cat-card {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    color: #2e7d32;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.cat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Nota: La imagen tiene un tooltip encima, 
+   pero se alcanza a ver la propiedad: */
+.cat-card i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+    color: #2e7d32;
+}
+
+.cat-card h4 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* --- Footer Mejorado --- */
+.main-footer {
+    background-color: #00261c;
+    color: #a5d6a7;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.main-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
+
+.category-grid {
+    display: grid;
+    /* Esto hace que si hay espacio, se pongan 3 en línea, si no, se ajusten */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    max-width: 900px; /* Limita el ancho para que no se peguen a los bordes */
+    margin: 40px auto;
 }
