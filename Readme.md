@@ -61,3 +61,5 @@ Integrante 4 = Luis Castilla
 En cargo: Contacto (información/vendedores)
 Abarca: Contactos (Redes/links), información
 de la empresa, footer
+
+prueba de coneción con la rama individual
