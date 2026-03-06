@@ -37,8 +37,8 @@ body {
 .logo {
     height: 55px;
 }
-/* Nombre principal del sitio */
 
+/* Nombre principal del sitio */
 .site-name {
     font-size: 1.8rem;
     font-weight: 600;
@@ -356,3 +356,4 @@ body {
         font-size: 40px;
     }
 }
+
