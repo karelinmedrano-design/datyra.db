@@ -41,6 +41,7 @@ body {
     font-weight: 400;
     opacity: 0.85;
 }
+
 /* NAV */
 /* --- NAVEGACIÓN Y DESPLEGABLE --- */
 
@@ -305,4 +306,165 @@ body {
 /* Mostrarlo al pasar el mouse por el elemento padre */
 .dropdown:hover .submenu {
     display: block;
+}
+
+/* --- RESET & VARIABLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #2e7d32; /* El verde que estás usando en los iconos */
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #ffffff;
+}
+
+/* --- NAVEGACIÓN (MAIN-NAV) --- */
+.main-header {
+    background-color: var(--white);
+    padding: 1rem 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* --- DROPDOWN (MENÚ DESPLEGABLE) --- */
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none; /* Se oculta por defecto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 1000;
+    flex-direction: column; /* Alinea items verticalmente */
+    padding: 10px 0;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu li a {
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.dropdown:hover .submenu {
+    display: flex;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 60vh;
+    background: url('tu-imagen-de-fondo.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen para que el texto se lea */
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    color: var(--white);
+}
+
+/* --- SECCIÓN DE BENEFICIOS (GRID) --- */
+.benefits-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+}
+
+.benefit-item:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.benefit-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.benefit-item h4 {
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.benefit-item p {
+    color: var(--text-light);
+    font-size: 0.95rem;
 }
