@@ -1,0 +1,359 @@
+
+/* ==== RESET & BASE ==== */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ====
+   ENCABEZADO PRINCIPAL (HEADER)
+   Contiene el logo, nombre del sitio y navegación.
+   ==== */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #02523a;
+}
+/* Contenedor del logo y nombre del sitio */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+}
+/* Imagen del logo */
+.logo {
+    height: 55px;
+}
+
+/* Nombre principal del sitio */
+.site-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+/* Lema o descripción del sitio */
+.site-tagline {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* ==== 
+   MENÚ DE NAVEGACIÓN
+   Enlaces principales del sitio web. 
+   ==== */
+
+.main-nav {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+/* Estilo de los enlaces del menú */
+.main-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+/* Efecto al pasar el cursor */
+.main-nav a:hover {
+    color: #22c55e;
+}
+
+/* ==== CONTACT SECTION ==== */
+
+.contact-section {
+    padding: 80px 10%;
+    background-color: #f9f9f9;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+/* ==== FORM ==== */
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form form {
+    background: #ffffff;
+    padding: 40px;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+}
+
+.contact-form textarea {
+    resize: none;
+    min-height: 130px;
+}
+
+.contact-form button {
+    background: #22c55e;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #16a34a;
+    transform: translateY(-3px);
+}
+
+/* ==== IMAGE ==== */
+
+.image-banner {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==== 
+   SECCIÓN DE CONTACTO
+   Área donde se muestran la imagen y el formulario.
+   ==== */
+
+.contact-section {
+    padding: 80px 10%;
+    background-color: #f9f9f9;
+}
+/* Contenedor principal que organiza la imagen y el formulario */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+/* ==== 
+   FORMULARIO DE CONTACTO
+   Campos de entrada para enviar mensajes al sitio.
+   ==== */
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 320px;
+}
+/* Caja visual del formulario */
+.contact-form form {
+    background: #ffffff;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+/* Campos de entrada del formulario */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+/* Estilo cuando el campo está activo */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+}
+/* Área de texto para mensajes */
+.contact-form textarea {
+    resize: none;
+    min-height: 130px;
+}
+/* Botón para enviar el formulario */
+.contact-form button {
+    background: #22c55e;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* Efecto visual al pasar el cursor sobre el botón */
+.contact-form button:hover {
+    background: #16a34a;
+    transform: translateY(-3px);
+}
+
+/* ==== 
+   BANNER DE IMAGEN
+   Imagen de destaque en la sección de contacto.
+   ==== */
+
+.image-banner {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Estilo de la imagen del banner */
+.banner {
+    width: 100%;
+    max-width: 520px;
+    height: 360px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+/* Efecto visual al pasar el cursor sobre la imagen */
+.banner:hover {
+    transform: rotate(6deg) scale(1.07);
+}
+
+/* ==== 
+   SECCIÓN SOCIAL
+   Enlaces a las redes sociales.
+   ==== */
+
+.social-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    text-align: center;
+}
+ /* Título de la sección social */
+.social-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: #02523a;
+}
+/* Contenedor de los iconos sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+/* Estilo de los iconos de redes sociales */
+.social-icons a {
+    font-size: 48px;
+    color: #22c55e;
+    transition: 0.3s ease;
+}
+/* Efecto visual al pasar el cursor sobre los iconos sociales */
+.social-icons a:hover {
+    transform: scale(1.4);
+    color: #16a34a;
+}
+
+/* ==== 
+   PIE DE PÁGINA
+   Información de contacto y enlaces adicionales.
+   ==== */
+
+.main-footer {
+    background-color: #011b0f;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    margin-top: 80px;
+}
+/* Estilo de los enlaces en el pie de página */
+.main-footer a {
+    color: #22c55e;
+    text-decoration: none;
+}
+/* Efecto al pasar el cursor sobre los enlaces del pie de página */
+.main-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ==== 
+   RESPONSIVE
+   Estilos para dispositivos móviles.
+   ==== */
+/* Ajustes para pantallas de hasta 768px de ancho */
+@media (max-width: 768px) {
+
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .banner {
+        max-width: 95%;
+        height: auto;
+        transform: none;
+    }
+
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .main-nav {
+        justify-content: center;
+    }
+
+    .social-icons {
+        gap: 30px;
+    }
+
+    .social-icons a {
+        font-size: 40px;
+    }
+}
+
