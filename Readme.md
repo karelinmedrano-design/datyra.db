@@ -62,5 +62,4 @@ En cargo: Contacto (información/vendedores)
 Abarca: Contactos (Redes/links), información
 de la empresa, footer
 
-Integrante 3 = Yovannis Sánchez
-en cargado de ofertas gg
+
