@@ -266,3 +266,28 @@ body {
     margin: 40px auto;
 }
 
+.benefits-grid {
+    display: grid;
+    /* Crea 3 columnas iguales, pero si no caben, se ajustan solas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-item i {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.benefit-item h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.benefit-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
